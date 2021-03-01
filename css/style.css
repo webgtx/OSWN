@@ -1,0 +1,207 @@
+body {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.intro {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  position: relative;
+}
+
+.intro__video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  height: 100vh;
+}
+
+.intro__video .intro__media {
+  width: 100%;
+}
+
+.intro__video .intro__text {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.intro__video .intro__text span {
+  color: #93f4f9;
+}
+
+.intro__video .intro__text .intro__logo {
+  color: #93f4f9;
+}
+
+.intro__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
+.intro__main .intro__hero {
+  height: 50%;
+  width: auto;
+  right: 10%;
+  position: absolute;
+  z-index: 0;
+}
+
+.intro__main .intro__info {
+  margin: 10%;
+  z-index: 1;
+}
+
+.intro__main .intro__info .intro__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  max-width: 350px;
+  height: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.intro__main .intro__info .intro__text .info__title {
+  margin: 8px;
+}
+
+.intro__main .intro__info .intro__text .info__title span {
+  color: #93f4f9;
+}
+
+.intro__main .intro__info .intro__text .info__text {
+  font-size: 13px;
+}
+
+.intro__main .intro__info .intro__text .info__buttons {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro__main .intro__info .intro__text .info__buttons .info__button {
+  margin-right: 10px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 8px 20px;
+  color: #fff;
+  z-index: 1;
+  transition: .4s;
+}
+
+.intro__main .intro__info .intro__text .info__buttons .info__button:hover {
+  color: #93f4f9;
+  border: solid #93f4f9 1px;
+}
+
+@media (min-width: 1000px) {
+  .intro__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 100vh;
+  }
+
+  .intro__video .intro__media {
+    width: 100%;
+  }
+
+  .intro__video .intro__text {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .intro__video .intro__text span {
+    color: #93f4f9;
+  }
+
+  .intro__video .intro__text .intro__logo {
+    color: #93f4f9;
+    font-size: 80px;
+  }
+
+  .intro__video .intro__text .intro__subtitle {
+    font-size: 25px;
+  }
+
+  .intro__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+  }
+
+  .intro__main .intro__hero {
+    height: 50%;
+    width: auto;
+    right: 10%;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .intro__main .intro__info {
+    margin: 10%;
+    z-index: 1;
+  }
+
+  .intro__main .intro__info .intro__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+    max-width: 500px;
+    height: auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .intro__main .intro__info .intro__text .info__title {
+    margin: 30px;
+    font-size: 40px;
+  }
+
+  .intro__main .intro__info .intro__text .info__text {
+    font-size: 20px;
+  }
+
+  .intro__main .intro__info .intro__text .info__buttons {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .intro__main .intro__info .intro__text .info__buttons .info__button {
+    margin-right: 10px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 8px 20px;
+    color: #fff;
+    z-index: 1;
+    transition: .4s;
+  }
+
+  .intro__main .intro__info .intro__text .info__buttons .info__button:hover {
+    color: #93f4f9;
+    border: solid #93f4f9 1px;
+  }
+}
