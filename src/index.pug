@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        title OSWN
+    body 
+        .wrapper
+            .intro
+                .intro__video
+                    video.intro__media(src='img/bg.mp4' autoplay muted loop)
+                    .intro__text
+                        h1.intro__logo OSWN
+                        p.intro__subtitle <span>O</span>pen <span>S</span>ource <span>W</span>eb <span>N</span>ovel</p>
+                .intro__main
+                    img.intro__hero(src='img/hero.png' alt='')
+                    .intro__info
+                        .intro__text
+                            h2.info__title Welcome to <span>OSWN</span>
+                            p.info__text Here you can read a short story for free, and write your own personal short story. If you find a bug in our application (which is likely to happen because the application is in beta), write to the developer about it. Thanks in advance, and enjoy your reading.
+                            .info__buttons
+                                a.info__button(href="#") Links
+                                a.info__button(href="#") Menu
+                                a.info__button(href="#") Github
+        script(src="js/script.js")

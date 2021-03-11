@@ -1,0 +1,225 @@
+// Base
+body {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+$color1: red; 
+
+
+// Mobile first
+// Intro
+.intro {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  position: relative;
+}
+
+// First block
+.intro__video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  .intro__media {
+    width: 100%
+  }
+    .intro__text {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+
+        & span {
+          color: $color1;
+        }
+        .intro__logo {
+          color: $color1;
+          // animation: rgb 2s linear;
+        }
+     }
+  height: 100vh;
+}
+// // FIXME:
+// @keyframes rgb {
+//   0% {
+//     .intro__logo {
+//       color: $color1;
+//     }
+//   }
+//   50% {
+//     .intro__logo {
+//       color: #58e8b5;
+//     }
+//   }
+//   100% {
+//     .intro__logo {
+//       color: #c8e858;
+//     }
+//   }
+// }
+
+// Second block
+.intro__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+
+  .intro__hero {
+    height: 50%;
+    width: auto;
+    right: 10%;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .intro__info {
+    margin: 10%;
+    z-index: 1;
+      .intro__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 10px;
+        max-width: 350px;
+        height: auto;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.8);
+
+          .info__title {
+            margin: 8px;
+             & span {
+               color: $color1;
+             }
+          }
+
+          .info__text {
+            font-size: 13px;
+          }
+          .info__buttons {
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+
+              .info__button {
+                margin-right: 10px;
+                text-decoration: none;
+                border: 1px solid #fff;
+                padding: 8px 20px;
+                color: #fff;
+                z-index: 1;
+                transition: .4s;
+                  &:hover {
+                    color: $color1;
+                    border: solid $color1 1px;
+                  }
+              }
+          }
+       }
+    }
+}
+
+// Desktop
+
+@media (min-width: 1000px) {
+  // First block
+  .intro__video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    .intro__media {
+      width: 100%
+    }
+      .intro__text {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+
+          & span {
+            color: $color1;
+          }
+          .intro__logo {
+            color: $color1;
+            font-size: 80px;
+          }
+          .intro__subtitle {
+            font-size: 25px;
+          }
+       }
+    height: 100vh;
+  }
+  // Second block
+  .intro__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+
+    .intro__hero {
+      height: 50%;
+      width: auto;
+      right: 10%;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .intro__info {
+      margin: 10%;
+      z-index: 1;
+        .intro__text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          padding: 10px;
+          max-width: 500px;
+          height: auto;
+          text-align: center;
+          background: rgba(0, 0, 0, 0.8);
+
+            .info__title {
+              margin: 30px;
+              font-size: 40px;
+            }
+
+            .info__text {
+              font-size: 20px;
+            }
+            .info__buttons {
+              margin: 20px;
+              display: flex;
+              justify-content: space-between;
+
+                .info__button {
+                  margin-right: 10px;
+                  text-decoration: none;
+                  border: 1px solid #fff;
+                  padding: 8px 20px;
+                  color: #fff;
+                  z-index: 1;
+                  transition: .4s;
+                    &:hover {
+                      color: $color1;
+                      border: solid $color1 1px;
+                    }
+                }
+            }
+         }
+      }
+  }
+
+
+}
