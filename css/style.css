@@ -35,7 +35,7 @@ body {
   cursor: pointer;
 }
 
-.intro__menu {
+.menu {
   transform: translate(0, -100vh);
   transition: all 0.5s;
   position: absolute;
@@ -48,12 +48,12 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 4;
 }
-.intro__menu .menu__links {
+.menu .menu__links {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.intro__menu .menu__links .menu__link {
+.menu .menu__links .menu__link {
   text-decoration: none;
   color: #fff;
   font-size: 2rem;
@@ -61,11 +61,11 @@ body {
   padding-left: 20px;
   transition: all 0.2s;
 }
-.intro__menu .menu__links .menu__link:hover {
+.menu .menu__links .menu__link:hover {
   border-left: solid red 2px;
   color: red;
 }
-.intro__menu .menu__hero {
+.menu .menu__hero {
   height: 40%;
   width: auto;
   object-fit: fill;
