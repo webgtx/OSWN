@@ -1,0 +1,1 @@
+const textbarFrom=document.querySelector(".textbar__from"),textbarText=document.querySelector(".textbar__text"),storyPages=["Welcome to OSWN",""];let autoText=setInterval(()=>{let e=-1;e==storyPages.length-1?(clearInterval(autoText),console.log("Finished")):(e++,textbarText.innerText=storyPages[e])},1e4);

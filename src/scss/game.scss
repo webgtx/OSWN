@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(47, 145, 120);
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.content {
+    height: 100vh;
+    display: grid;
+    grid-template: 1fr 1fr .4fr / 1fr 1fr 1fr;
+    .content__heros {
+        grid-column: 1 / 4;
+        grid-row: 3 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        .content__hero {
+            height: 80%;
+        }
+    }
+    .content__textbar {
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+        padding: 3%;
+        background-color: rgba(0, 0, 0, 0.548);
+        .textbar__from {
+            color: rgb(236, 142, 105);
+        }
+        .textbar__text {
+            margin: 10px;
+            font-size: 20px;
+        }
+    }
+}
