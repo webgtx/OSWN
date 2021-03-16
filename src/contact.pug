@@ -4,9 +4,27 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="css/contact.css")
-        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet", href="../css/contact.css")
+        link(rel="stylesheet", href="../css/menu.css")
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet"> 
         title Document
     body 
         .wrapper
+            img.bg(src="../img/bg.jpg", alt="")
             include modules/menu.pug
+            .menu-button(id="menu")
+            img.bg-hero(src="../img/contacts-hero.png")
+            main.contacts
+                h1.contacts__title OSWN created by
+                .contacts__items
+                    .contacts__item
+                        h2.item-name Alex Zolotarov
+                        h3.item-sname Fullstack Development
+                    .contacts__item
+                        h2.item-name Andrew Jhonson
+                        h3.item-sname Story Writer
+                    .contacts__item
+                        h2.item-name Annie Froger
+                        h3.item-sname Artist
+        script(src="../js/script.js") 

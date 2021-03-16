@@ -1,6 +1,6 @@
 const menuButton = document.getElementById('menu');
 const menuBlock = document.querySelector('.menu');
-const exitButton = document.querySelector('.exit-button')
+const exitButton = document.querySelector('.exit-button');
 const mainBlock = document.querySelector('.intro__main');
 
 menuButton.addEventListener('click', () => {
