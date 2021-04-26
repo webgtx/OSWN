@@ -1,8 +1,27 @@
 const textbarFrom = document.querySelector('.textbar__from')
 const textbarText = document.querySelector('.textbar__text')
+const heroImg = document.querySelector('.content__hero')
 // Text interactive
 
-const storyPages = ['Welcome to OSWN', 'Here i wanna teach, how to play'];
+function ContentForm(img, name, message) {
+    this.img = img
+    this.name = name;
+    this.message = message;
+}
+
+
+const storyPages = [
+    new ContentForm (
+        `<img class="content__hero" src="../img/game-hero.png" alt="">`,
+        'Alisa',
+        'Something'
+    ),
+    new ContentForm (
+        `<img class="content__hero" src="../img/game-hero.png" alt="">`,
+        'Alisa',
+        'Here i wanna teach you some'
+    )
+];
 let i = -1;
 
 let autoText = setInterval(() => {
@@ -11,8 +30,9 @@ let autoText = setInterval(() => {
         console.log('Finished');
     } else {
         i++;
-        textbarText.innerText = storyPages[i];
+        heroImg.innerHTML = storyPages[i].img;
+        textbarFrom.innerText = storyPages[i].name;
+        textbarText.innerText = storyPages[i].message;
         console.log(i);
-        
     }
 }, 10000);
