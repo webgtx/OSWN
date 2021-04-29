@@ -1,5 +1,4 @@
 body {
-  background-color: #2f9178;
   color: #fff;
 }
 
@@ -12,12 +11,20 @@ body {
   height: 100vh;
 }
 
+.background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+
 .content {
   height: 100vh;
   display: grid;
   grid-template: 1fr 1fr 0.4fr/1fr 1fr 1fr;
 }
 .content .content__heros {
+  z-index: 1;
   grid-column: 1/4;
   grid-row: 3/1;
   display: flex;
@@ -28,6 +35,7 @@ body {
   height: 80%;
 }
 .content .content__textbar {
+  z-index: 1;
   grid-row: 3/4;
   grid-column: 1/4;
   padding: 3%;

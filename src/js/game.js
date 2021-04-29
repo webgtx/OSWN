@@ -1,10 +1,12 @@
+const background = document.querySelector('.background')
 const textbarFrom = document.querySelector('.textbar__from')
 const textbarText = document.querySelector('.textbar__text')
 const heroImg = document.querySelector('.content__hero')
 // Text interactive
 
-function ContentForm(img, name, message) {
-    this.img = img
+function ContentForm(bg, img, name, message) {
+    this.bg = background;
+    this.img = img;
     this.name = name;
     this.message = message;
 }
@@ -12,12 +14,14 @@ function ContentForm(img, name, message) {
 
 const storyPages = [
     new ContentForm (
-        `<img class="content__hero" src="../img/game-hero.png" alt="">`,
+        'rgb(47, 145, 120)',
+        '../img/game-hero.png',
         'Alisa',
         'Something'
     ),
     new ContentForm (
-        `<img class="content__hero" src="../img/game-hero.png" alt="">`,
+        'rgb(47, 145, 120)',
+        '../img/game-hero.png',
         'Alisa',
         'Here i wanna teach you some'
     )
@@ -30,9 +34,10 @@ let autoText = setInterval(() => {
         console.log('Finished');
     } else {
         i++;
-        heroImg.innerHTML = storyPages[i].img;
+        background.style.background = 'rgb(47, 145, 120)';
+        img.setAttribute('src', storyPages[i].img);
         textbarFrom.innerText = storyPages[i].name;
         textbarText.innerText = storyPages[i].message;
         console.log(i);
     }
-}, 10000);
+}, 5000);
