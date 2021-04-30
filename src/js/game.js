@@ -15,13 +15,13 @@ function ContentForm(bg, img, name, message) {
 const storyPages = [
     new ContentForm (
         'rgb(47, 145, 120)',
-        '../img/game-hero.png',
+        '../../media/img/game-hero.png',
         'Alisa',
         'Something'
     ),
     new ContentForm (
         'rgb(47, 145, 120)',
-        '../img/game-hero.png',
+        '../../media/img/game-hero.png',
         'Alisa',
         'Here i wanna teach you some'
     )

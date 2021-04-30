@@ -93,6 +93,35 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 1000px) {
+  .menu {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+  }
+  .menu .menu__links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.4s;
+  }
+  .menu .menu__links .menu__link {
+    color: #fff;
+    font-size: 2rem;
+    margin: 10px;
+  }
+  .menu .menu__hero {
+    height: 80%;
+    width: auto;
+    object-fit: fill;
+  }
+}
 .wrapper {
   height: 100vh;
   position: relative;

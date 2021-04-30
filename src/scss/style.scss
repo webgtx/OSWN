@@ -11,7 +11,7 @@ body {
   scroll-behavior: smooth;
 }
 
-$color1: red; 
+$color1: red;
 
 
 // Mobile first
@@ -137,34 +137,6 @@ $color1: red;
 // Desktop
 
 @media (min-width: 1000px) {
-  // Menu
-.menu {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(0,0,0, 0.8);
-  z-index: 4;
-    .menu__links {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      transition: all .4s;
-        .menu__link {
-          color: #fff;
-          font-size: 2rem;
-          margin: 10px;
-        }
-    }
-    .menu__hero {
-      height: 80%;
-      width: auto;
-      object-fit: fill;
-    }
-}
 
   // First block
   .intro__video {
