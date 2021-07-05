@@ -2,33 +2,39 @@ const background = document.querySelector('.background')
 const textbarFrom = document.querySelector('.textbar__from')
 const textbarText = document.querySelector('.textbar__text')
 const heroImg = document.querySelector('.content__hero')
+
+const storyData = JSON.stringify(
+  [
+    {
+      bg: 'rgb(23, 234, 453)',
+      img: '../../media/img/game-hero.png',
+      name: 'Whonix',
+      msg: 'Something'
+    },
+    {
+      bg: 'rgb(23, 234, 453)',
+      img: '../../media/img/game-hero.png',
+      name: 'Whonix',
+      msg: 'u know? i tired do that always.'
+    },
+    {
+      bg: 'red',
+      img: '../../media/img/game-hero.png',
+      name: 'Whonix',
+      msg: 'AND I WILL KILL YOU!'
+    }
+  ]
+)
+
 // Text interactive
 
-function ContentForm(bg, img, name, message) {
-    this.bg = bg;
-    this.img = img;
-    this.name = name;
-    this.message = message;
+const storyPages = new Array;
+for (const item of JSON.parse(storyData)) {
+  storyPages.push(Object.assign(item));
 }
 
 
-const storyPages = [
-    new ContentForm (
-        'rgb(47, 145, 120)',
-        '../../media/img/game-hero.png',
-        'Alisa',
-        'Something'
-    ),
-    new ContentForm (
-        'rgb(23, 234, 453)',
-        '../../media/img/game-hero.png',
-        'Alisa',
-        'Here i wanna teach you some'
-    )
-];
-
 let counter = -1;
-
 function nextPage(timeout) {
 	storyPages.length <= counter + 1 ? console.log('Done')
 	: counter++
@@ -36,7 +42,8 @@ function nextPage(timeout) {
       background.style.background = storyPages[counter].bg;
       heroImg.setAttribute('src', storyPages[counter].img);
       textbarFrom.innerText = storyPages[counter].name;
-      textbarText.innerText = storyPages[counter].message;
-      console.log(counter);
+      textbarText.innerText = storyPages[counter].msg;
+      // nextPage(3000)
+      // console.log(counter);
     }, timeout);
 }
