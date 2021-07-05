@@ -5,7 +5,7 @@ const heroImg = document.querySelector('.content__hero')
 // Text interactive
 
 function ContentForm(bg, img, name, message) {
-    this.bg = background;
+    this.bg = bg;
     this.img = img;
     this.name = name;
     this.message = message;
@@ -20,24 +20,23 @@ const storyPages = [
         'Something'
     ),
     new ContentForm (
-        'rgb(47, 145, 120)',
+        'rgb(23, 234, 453)',
         '../../media/img/game-hero.png',
         'Alisa',
         'Here i wanna teach you some'
     )
 ];
-let i = -1;
 
-let autoText = setInterval(() => {
-    if ( i == storyPages.length - 1 ) {
-        clearInterval(autoText);
-        console.log('Finished');
-    } else {
-        i++;
-        background.style.background = 'rgb(47, 145, 120)';
-        img.setAttribute('src', storyPages[i].img);
-        textbarFrom.innerText = storyPages[i].name;
-        textbarText.innerText = storyPages[i].message;
-        console.log(i);
-    }
-}, 5000);
+let counter = -1;
+
+function nextPage(timeout) {
+	storyPages.length <= counter + 1 ? console.log('Done')
+	: counter++
+    setTimeout(() => {
+      background.style.background = storyPages[counter].bg;
+      heroImg.setAttribute('src', storyPages[counter].img);
+      textbarFrom.innerText = storyPages[counter].name;
+      textbarText.innerText = storyPages[counter].message;
+      console.log(counter);
+    }, timeout);
+}
