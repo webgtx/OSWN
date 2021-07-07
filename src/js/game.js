@@ -6,27 +6,27 @@ const heroImg = document.querySelector('.content__hero')
 const storyData = JSON.stringify(
   [
     {
-      bg: 'rgb(23, 234, 453)',
+      bg: 'url(https://wallpapercave.com/wp/wp4920588.jpg)',
       img: '../../media/img/game-hero.png',
       name: 'Whonix',
-      msg: 'Something'
+      msg: 'Something',
     },
     {
-      bg: 'rgb(23, 234, 453)',
+      bg: 'url(https://wallpapercave.com/wp/wp4920588.jpg)',
       img: '../../media/img/game-hero.png',
       name: 'Whonix',
       msg: 'u know? i tired do that always.'
     },
     {
       bg: 'red',
-      img: '../../media/img/game-hero.png',
-      name: 'Whonix',
+      img: 'https://64.media.tumblr.com/5503e6631056023ccbcbc4bfe62ec635/tumblr_p07xc7auso1ur8xiso1_1280.png',
+      name: 'Killer',
       msg: 'AND I WILL KILL YOU!'
     }
   ]
 )
 
-// Text interactive
+// Dynamic Engine
 
 const storyPages = new Array;
 for (const item of JSON.parse(storyData)) {
@@ -35,6 +35,7 @@ for (const item of JSON.parse(storyData)) {
 
 
 let counter = -1;
+restart = () => counter = -1;
 function nextPage(timeout) {
 	storyPages.length <= counter + 1 ? console.log('Done')
 	: counter++
@@ -47,3 +48,5 @@ function nextPage(timeout) {
       // console.log(counter);
     }, timeout);
 }
+
+
