@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   color: #fff;
 }
@@ -17,6 +18,40 @@ body {
   width: 100%;
   object-fit: contain;
   z-index: 0;
+}
+
+.textbar_action {
+  margin-bottom: 2000px;
+  margin-left: 1200px;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+}
+
+img.textbar_action {
+  background: url(images/sun1.png);
+  /* Путь к файлу с исходным рисунком  */
+  margin-bottom: 2000px;
+  margin-left: 1200px;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+}
+
+img.textbar_action:hover {
+  background: url(images/sun2.png);
+  /* Путь к файлу с заменяемым рисунком  */
+  margin-bottom: 2000px;
+  margin-left: 1200px;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+}
+
+.textbar__restart {
+  position: absolute;
+  margin-left: 1020px;
+  margin-top: 15px;
 }
 
 .content {
@@ -39,7 +74,7 @@ body {
   z-index: 1;
   grid-row: 3/4;
   grid-column: 1/4;
-  padding: 3%;
+  padding: 4%;
   background-color: rgba(0, 0, 0, 0.548);
 }
 .content .content__textbar .textbar__from {

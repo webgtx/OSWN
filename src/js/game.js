@@ -37,7 +37,10 @@ for (const item of JSON.parse(storyData)) {
 
 
 let counter = -1;
-restart = () => counter = -1;
+restart = () => {
+  counter = -1;
+  nextPage()
+};
 function nextPage(timeout) {
 	storyPages.length <= counter + 1 ? console.log('Done')
 	: counter++

@@ -13,8 +13,10 @@ html(lang="en")
             .content__heros
                 img.content__hero(alt="" id="img")
             .content__textbar
+                img.textbar_action(src="https://www.svgrepo.com/show/941/right-arrow.svg" onclick="nextPage()")
                 h3.textbar__from Jhon Doe
                 p.textbar__text
+                a.textbar__restart(onclick="restart()") Restart
 
     script(src="modules/js/game.js")
     script(src="modules/js/data.json")
