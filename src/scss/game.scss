@@ -2,6 +2,9 @@ body {
     color: #fff;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import 'menu.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +12,8 @@ body {
 
 .wrapper {
     height: 100vh;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 
 .background {
@@ -17,39 +22,32 @@ body {
   width: 100%;
   object-fit: contain;
   z-index: 0;
-}
-.textbar_action{
-  margin-bottom:2000px; 
-  margin-left:1200px; 
-  height: 90px;
-  width: 90px;
-  position: absolute;
-}
-img.textbar_action {
-    background: url(images/sun1.png); /* Путь к файлу с исходным рисунком  */
-     margin-bottom:2000px; 
-  margin-left:1200px; 
-  height: 90px;
-  width: 90px;
-  position: absolute;
-   }
-img.textbar_action:hover {
-    background: url(images/sun2.png); /* Путь к файлу с заменяемым рисунком  */
-     margin-bottom:2000px; 
-  margin-left:1200px; 
-  height: 90px;
-  width: 90px;
-  position: absolute;
-   }
-.textbar__restart{ 
-   position: absolute;     
-   margin-left: 1020px;
-   margin-top:15px;
+  background: #111;
 }
 .content {
     height: 100vh;
     display: grid;
-    grid-template: 1fr 1fr .4fr / 1fr 1fr 1fr;
+    grid-template: 1fr 1fr .3fr / 1fr 1fr 1fr;
+    @keyframes showIntro {
+        25% {
+            transform: translate(0, 100%);
+        }
+        50% {
+            transform: translate(0, 100%);
+        }
+        100% {
+            transform: translate(0, -100%);
+        }
+    }
+    .content__intro {
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin: auto;
+        position: absolute;
+        transform: translate(0, -100%);
+        animation: showIntro 5s 1s ease;
+    }
     .content__heros {
         z-index: 1;
         grid-column: 1 / 4;
@@ -62,9 +60,10 @@ img.textbar_action:hover {
         }
     }
     .content__textbar {
+        position: relative;
         z-index: 1;
         grid-row: 3 / 4;
-        grid-column: 1 / 4; 
+        grid-column: 1 / 4;
         padding: 4%;
         background-color: rgba(0, 0, 0, 0.548);
         .textbar__from {
@@ -74,6 +73,20 @@ img.textbar_action:hover {
             margin: 10px;
             font-size: 20px;
         }
-
+        .textbar__action {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 5%;
+        }
+        .textbar__restart {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 2% 5%;
+        }
     }
 }

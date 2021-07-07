@@ -9,14 +9,18 @@ html(lang="en")
     body
     .wrapper
         .background
+        include modules/menu.pug
         main.content
+            .content__intro
+                h1.intro__title Welcome to OSWN demo
+                p.intro__info if you catch bug, pls send pull request.
             .content__heros
                 img.content__hero(alt="" id="img")
             .content__textbar
-                img.textbar_action(src="https://www.svgrepo.com/show/941/right-arrow.svg" onclick="nextPage()")
                 h3.textbar__from Jhon Doe
                 p.textbar__text
+                img.textbar__action(src="https://www.svgrepo.com/show/941/right-arrow.svg" onclick="nextPage()")
                 a.textbar__restart(onclick="restart()") Restart
 
     script(src="modules/js/game.js")
-    script(src="modules/js/data.json")
+    script(src="modules/js/script.js")
