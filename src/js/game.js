@@ -7,21 +7,23 @@ const storyData = JSON.stringify(
   [
     {
       bg: 'url(https://wallpapercave.com/wp/wp4920588.jpg)',
-      img: '../../media/img/game-hero.png',
+      img: 'media/img/game-hero.png',
       name: 'Whonix',
       msg: 'Something',
     },
     {
       bg: 'url(https://wallpapercave.com/wp/wp4920588.jpg)',
-      img: '../../media/img/game-hero.png',
+      img: 'media/img/game-hero.png',
       name: 'Whonix',
-      msg: 'u know? i tired do that always.'
+      msg: 'u know? i tired do that always.',
+      pos: 0
     },
     {
       bg: 'red',
       img: 'https://64.media.tumblr.com/5503e6631056023ccbcbc4bfe62ec635/tumblr_p07xc7auso1ur8xiso1_1280.png',
       name: 'Killer',
-      msg: 'AND I WILL KILL YOU!'
+      msg: 'AND I WILL KILL YOU!',
+      pos: 0
     }
   ]
 )
@@ -42,9 +44,10 @@ function nextPage(timeout) {
     setTimeout(() => {
       background.style.background = storyPages[counter].bg;
       heroImg.setAttribute('src', storyPages[counter].img);
+      // heroImg.style.transform(`translate(0, ${storyPages[counter].pos})`);
       textbarFrom.innerText = storyPages[counter].name;
       textbarText.innerText = storyPages[counter].msg;
-      // nextPage(3000)
+      // nextPage(3000);
       // console.log(counter);
     }, timeout);
 }
