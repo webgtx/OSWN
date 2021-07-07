@@ -1,43 +1,74 @@
-const background = document.querySelector('.background')
-const textbarFrom = document.querySelector('.textbar__from')
-const textbarText = document.querySelector('.textbar__text')
-const heroImg = document.querySelector('.content__hero')
-// Text interactive
+const background = document.querySelector('.background');
+const textbarFrom = document.querySelector('.textbar__from');
+const textbarText = document.querySelector('.textbar__text');
+const actionBtn = document.querySelector('.textbar__action');
+const heroImg = document.querySelector('.content__hero');
 
-function ContentForm(bg, img, name, message) {
-    this.bg = background;
-    this.img = img;
-    this.name = name;
-    this.message = message;
+const storyData = JSON.stringify(
+  [
+    {
+      bg: 'url(https://wallpapercave.com/wp/wp4920588.jpg)',
+      img: 'media/img/game-hero.png',
+      name: 'Whonix',
+      msg: 'Hey, how are you?',
+      pos: 0
+    },
+    {
+      bg: 'url(https://wallpapercave.com/wp/wp4920588.jpg)',
+      img: 'media/img/game-hero.png',
+      name: 'Whonix',
+      msg: 'u know? i tired do that always.',
+      pos: 100 + '%'
+    },
+    {
+      bg: 'red',
+      img: 'https://64.media.tumblr.com/5503e6631056023ccbcbc4bfe62ec635/tumblr_p07xc7auso1ur8xiso1_1280.png',
+      name: 'Killer',
+      msg: 'AND I WILL KILL YOU!',
+      pos: 0
+    }
+  ]
+)
+
+// Dynamic Engine
+
+const storyPages = new Array;
+for (const item of JSON.parse(storyData)) {
+  storyPages.push(Object.assign(item));
 }
 
+// Hover button
 
-const storyPages = [
-    new ContentForm (
-        'rgb(47, 145, 120)',
-        '../../media/img/game-hero.png',
-        'Alisa',
-        'Something'
-    ),
-    new ContentForm (
-        'rgb(47, 145, 120)',
-        '../../media/img/game-hero.png',
-        'Alisa',
-        'Here i wanna teach you some'
-    )
-];
-let i = -1;
+// function fadeOut(event) {
+//     event.target.style.transition = '.5s ease'
+//     event.target.style.opacity = '0%';
+//     setTimeout(() => {
+//         event.target.style.opacity = '100%';
+//     }, 1000);
+// }
 
-let autoText = setInterval(() => {
-    if ( i == storyPages.length - 1 ) {
-        clearInterval(autoText);
-        console.log('Finished');
-    } else {
-        i++;
-        background.style.background = 'rgb(47, 145, 120)';
-        img.setAttribute('src', storyPages[i].img);
-        textbarFrom.innerText = storyPages[i].name;
-        textbarText.innerText = storyPages[i].message;
-        console.log(i);
-    }
-}, 5000);
+actionBtn.addEventListener('mouseover', event => {
+    event.target.setAttribute('src', 'https://www.svgrepo.com/show/138324/arrow-pointing-to-right-in-a-circle.svg');
+})
+
+actionBtn.addEventListener('mouseout', event => event.target.setAttribute('src', 'https://www.svgrepo.com/show/941/right-arrow.svg'))
+
+
+let counter = -1;
+restart = () => {
+  counter = -1;
+  nextPage();
+}
+function nextPage(timeout) {
+	storyPages.length <= counter + 1 ? null
+	: counter++
+    setTimeout(() => {
+      background.style.background = storyPages[counter].bg;
+      heroImg.setAttribute('src', storyPages[counter].img);
+      heroImg.style.transform =`translate(${storyPages[counter]?.pos}, 0)`;
+      textbarFrom.innerText = storyPages[counter].name;
+      textbarText.innerText = storyPages[counter].msg;
+      // nextPage(3000);
+      // console.log(counter);
+    }, timeout);
+}

@@ -4,16 +4,23 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="/modules/css/game.css")
+        link(rel="stylesheet", href="modules/css/game.css")
         title Document
     body
     .wrapper
         .background
+        include modules/menu.pug
         main.content
+            .content__intro
+                h1.intro__title Welcome to OSWN demo
+                p.intro__info if you catch bug, pls send pull request.
             .content__heros
                 img.content__hero(alt="" id="img")
             .content__textbar
                 h3.textbar__from Jhon Doe
                 p.textbar__text
+                img.textbar__action(src="https://www.svgrepo.com/show/941/right-arrow.svg" onclick="nextPage()")
+                a.textbar__restart(onclick="restart()") Restart
 
     script(src="modules/js/game.js")
+    script(src="modules/js/script.js")

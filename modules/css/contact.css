@@ -122,6 +122,26 @@ body {
     object-fit: fill;
   }
 }
+.menu__button {
+  text-decoration: none;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: #BF2E97;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+.menu__button::after {
+  font-size: 30px;
+  content: "+";
+  cursor: pointer;
+}
+
 .wrapper {
   height: 100vh;
   position: relative;
